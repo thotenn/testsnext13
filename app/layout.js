@@ -1,6 +1,12 @@
+import { Overpass } from '@next/font/google';
 import '../styles/globals.css';
-import { Navigation } from "./cmp/Navigation"
+import { Navigation } from "./cmp/Navigation";
 
+
+const fontOverpass = Overpass({
+  weight: ['400', '700'],
+  subsets: ['latin']
+})
 
 
 export default function RootLayout({ children }) {
@@ -9,7 +15,7 @@ export default function RootLayout({ children }) {
       <head>
         <title>My first app with Next</title>
       </head>
-      <body>
+      <body className={fontOverpass.className}>
         <Navigation />
         {children}
       </body>

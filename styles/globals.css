@@ -21,6 +21,10 @@ body {
   margin: 0 auto;
 }
 
+h2 {
+  font-family: var(--font-pacifico);
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

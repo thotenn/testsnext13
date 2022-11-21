@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { fontGrotesk } from "../../../font";
 import { LikeButton } from "./LikeButton";
 
 const fetchPosts = () => {
@@ -22,7 +23,7 @@ export async function ListOfPosts() {
         <article key={post.id}>
             <Link href={`/posts/${post.id}`}>
                 <h2 style={{ color: "#09f" }}>{post.title}</h2>
-                <p>{post.body}</p>
+                <p className={fontGrotesk.className}>{post.body}</p>
                 <LikeButton id={post.id} />
             </Link>
         </article>
